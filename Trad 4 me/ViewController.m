@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TabBarViewController.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self performSelector:@selector(startNextView) withObject:nil afterDelay:5.0f];
+}
+
+- (void) startNextView{
+    [self performSegueWithIdentifier:@"startApp" sender:self];
+    
 }
 
 - (void)didReceiveMemoryWarning {
